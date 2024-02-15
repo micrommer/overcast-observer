@@ -12,6 +12,11 @@ class Builder {
 
     fun withLogStreamer(logStreamerWizard: LogStreamerWizard): Builder = add(logStreamerWizard)
 
+    fun withPodEliminator(podEliminatorWizard: PodEliminatorWizard): Builder = add(podEliminatorWizard)
+
+    fun withMultiplePodEliminator(multiplePodEliminatorWizard: PodEliminatorWizard): Builder =
+        add(multiplePodEliminatorWizard)
+
     fun build(): ActionSequence = ActionSequence(stack)
 
 }

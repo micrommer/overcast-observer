@@ -19,7 +19,7 @@ class LivenessProbeWizardBlock(private val liveProbeContext: LiveProbeContext) :
         }
 
 
-        val svcList = liveProbeContext.client.services().inNamespace("thingsboard").list().items
+        val svcList = liveProbeContext.client.services().inNamespace(liveProbeContext.namespace).list().items
         svcList.forEach {
 
         }
