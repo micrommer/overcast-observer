@@ -9,6 +9,6 @@ abstract class Action(val cxt: GenericK8sContext) : Runnable {
     protected val logger = LoggerFactory.getLogger(this.javaClass)
     protected fun logHeader() = "[${this.javaClass.simpleName}] :"
 
-    protected fun logException(ex: Exception) =
-        logger.error("${logHeader()} has has failed because of [${ex.javaClass.simpleName}] with message -> ${ex.message}")
+    protected fun logException(ex: Exception?) =
+        logger.error("${logHeader()} has has failed because of [${ex?.javaClass?.simpleName}] with message -> ${ex?.message}")
 }

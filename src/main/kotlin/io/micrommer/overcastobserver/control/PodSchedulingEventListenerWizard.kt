@@ -1,5 +1,7 @@
 package io.micrommer.overcastobserver.control
 
-interface PodSchedulingEventListenerWizard {
+import io.micrommer.overcastobserver.domain.PodSchedulingEventListenerContext
 
+interface PodSchedulingEventListenerWizard {
+    fun runListener(podSchedulingEventListenerContext: PodSchedulingEventListenerContext)
 }

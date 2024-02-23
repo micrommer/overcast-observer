@@ -1,3 +1,3 @@
 package io.micrommer.overcastobserver.exception
 
-class MalformedInstrumentException(val rootException : Throwable): Exception()
+class MalformedInstrumentException(val rootException : Throwable?): Exception()
